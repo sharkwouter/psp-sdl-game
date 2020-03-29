@@ -3,7 +3,7 @@ OBJS = main.o
 
 CFLAGS = -Wall -Wextra
 CXXFLAGS = $(CFLAGS)
-CC = g++
+CC = gcc
 
 LIBS=-lSDL
 
@@ -13,7 +13,7 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $(TARGET) $^ $(LIBS)
 
-%.o: %.cpp
+%.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $^ $(LIBS)
 
 clean:
