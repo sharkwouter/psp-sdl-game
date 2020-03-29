@@ -5,17 +5,16 @@ CFLAGS = -Wall -Wextra
 CXXFLAGS = $(CFLAGS)
 CC = g++
 
-INC=-I /usr/include/SDL2/
-LIBS=-lSDL2
+LIBS=-lSDL
 
 all: $(TARGET)
 	echo Created $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) -o $(TARGET) $^ $(INC) $(LIBS)
+	$(CC) $(CFLAGS) -o $(TARGET) $^ $(LIBS)
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) -c -o $@ $^ $(INC) $(LIBS)
+	$(CC) $(CFLAGS) -c -o $@ $^ $(LIBS)
 
 clean:
 	rm $(OBJS) $(TARGET)
