@@ -1,5 +1,5 @@
 TARGET = main
-OBJS = main.o
+OBJS = main.o game.o player.o psp.o
 
 PSPSDK = $(shell psp-config --pspsdk-path)
 PSPPREFIX = $(shell psp-config --psp-prefix)
@@ -13,5 +13,6 @@ LIBS = $(shell $(SDL_CONFIG) --libs)
 
 EXTRA_TARGETS = EBOOT.PBP
 PSP_EBOOT_TITLE = Main
+PSP_EBOOT_ICON = ICON0.PNG
 
 include $(PSPSDK)/lib/build.mak

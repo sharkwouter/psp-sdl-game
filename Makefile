@@ -1,5 +1,5 @@
 TARGET = main
-OBJS = main.o
+OBJS = main.o game.o player.o
 
 CFLAGS = -Wall -Wextra
 CXXFLAGS = $(CFLAGS)
